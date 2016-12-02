@@ -3,5 +3,11 @@
 
     <string name="app_name">Nhom6</string>
     <string name="hello_world">Hello world!</string>
+    <string name="tieude">Good Job</string>
+    <string name="tenvieclam">Tên việc làm</string>
+    <string name="tentp">Tên thành phố</string>
+    <string name="btntk">Tìm kiếm</string>
+    <string name="btncvct">Công việc của tôi</string>
+    
 
 </resources>
