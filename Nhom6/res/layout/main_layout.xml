@@ -2,10 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10sp"
+    android:background="#eeeeee"
     android:orientation="vertical" >
 
-    <LinearLayout
+   <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
@@ -24,6 +24,8 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_weight="2"
         android:orientation="vertical" >
 
@@ -31,32 +33,37 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/tenvieclam"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/edttvl"
+            android:id="@+id/edtTenvl"
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:background="@drawable/border_edittext"
             android:hint="Tên việc làm"
             android:textSize="20sp" />
+         
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:orientation="vertical" >
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/tentp"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/edttp"
+            android:id="@+id/edtTenTP"
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:background="@drawable/border_edittext"
             android:hint="Tên thành phố"
             android:textSize="20sp" />
     </LinearLayout>
@@ -64,33 +71,34 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/btntk"
+            android:id="@+id/btnTimKiem"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50sp"
-            android:layout_marginRight="50sp"
+            android:layout_marginLeft="70sp"
+            android:layout_marginRight="70sp"
+            android:layout_marginTop="20dp"
+            android:background="#FF9900"
             android:text="@string/btntk"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
-        android:gravity="center"
-        android:orientation="horizontal" >
+        android:layout_weight="2">
 
         <Button
-            android:id="@+id/btncvct"
+            android:id="@+id/btnCongViec"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
+            android:layout_height="40dp"
+            android:background="@drawable/border_edittext"
             android:text="@string/btncvct"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
     </LinearLayout>
+
 
 </LinearLayout>
