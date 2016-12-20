@@ -35,8 +35,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:text="Goob Jobs"
-                android:textSize="35dp" />
+                android:text="Công Việc Của Bạn"
+                android:textSize="28dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -54,11 +54,11 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/lvdanhsach"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_edittext"
-        android:layout_margin="5dp" >
+        android:id="@+id/lvCongViec"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/border_edittext" >
     </ListView>
 
 </LinearLayout>

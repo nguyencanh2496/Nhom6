@@ -35,7 +35,7 @@
             android:text="@string/tenvieclam"
             android:textSize="20sp" />
 
-        <EditText
+        <AutoCompleteTextView 
             android:id="@+id/edtTenvl"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
@@ -59,7 +59,7 @@
             android:text="@string/tentp"
             android:textSize="20sp" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/edtTenTP"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
@@ -97,6 +97,8 @@
             android:layout_height="40dp"
             android:background="@drawable/border_edittext"
             android:text="@string/btncvct"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="20sp" />
     </LinearLayout>
 

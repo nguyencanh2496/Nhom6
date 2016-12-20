@@ -2,15 +2,7 @@ package vn.edu.tdc.datamodels;
 
 public class Question {
 
-	String TenCV, TenTP, TenCTy, DiaChi, ThoiGian, Luong, image, MoTaCV, YeuCauCV;
-
-	public String getMoTaCV() {
-		return MoTaCV;
-	}
-
-	public void setMoTaCV(String moTaCV) {
-		MoTaCV = moTaCV;
-	}
+	private String  TenCV, TenCTy, TenTP, Luong,  Date, Link;
 
 	public String getTenCV() {
 		return TenCV;
@@ -18,14 +10,6 @@ public class Question {
 
 	public void setTenCV(String tenCV) {
 		TenCV = tenCV;
-	}
-
-	public String getTenTP() {
-		return TenTP;
-	}
-
-	public void setTenTP(String tenTP) {
-		TenTP = tenTP;
 	}
 
 	public String getTenCTy() {
@@ -36,20 +20,12 @@ public class Question {
 		TenCTy = tenCTy;
 	}
 
-	public String getDiaChi() {
-		return DiaChi;
+	public String getTenTP() {
+		return TenTP;
 	}
 
-	public void setDiaChi(String diaChi) {
-		DiaChi = diaChi;
-	}
-
-	public String getThoiGian() {
-		return ThoiGian;
-	}
-
-	public void setThoiGian(String thoiGian) {
-		ThoiGian = thoiGian;
+	public void setTenTP(String tenTP) {
+		TenTP = tenTP;
 	}
 
 	public String getLuong() {
@@ -60,20 +36,48 @@ public class Question {
 		Luong = luong;
 	}
 
-	public String getImage() {
-		return image;
+	public String getDate() {
+		return Date;
 	}
 
-	public void setImage(String image) {
-		this.image = image;
+	public void setDate(String date) {
+		Date = date;
+	}
+
+	public String getLink() {
+		return Link;
+	}
+
+	public void setLink(String link) {
+		Link = link;
 	}
 
 	@Override
 	public String toString() {
-		return "Question [TenCV=" + TenCV + ", TenTP=" + TenTP + ", TenCTy="
-				+ TenCTy + ", DiaChi=" + DiaChi + ", ThoiGian=" + ThoiGian
-				+ ", Luong=" + Luong + ", image=" + image + ", MoTaCV="
-				+ MoTaCV + ", YeuCauCV=" + YeuCauCV + "]";
+		return "Question [TenCV=" + TenCV + ", TenCTy=" + TenCTy + ", TenTP="
+				+ TenTP + ", Luong=" + Luong + ", Date=" + Date + ", Link="
+				+ Link + "]";
+	}
+
+	public String getStrLink() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Question(String tenCV, String tenCTy, String tenTP, String luong,
+			String date, String link) {
+		super();
+		this.TenCV = tenCV;
+		this.TenCTy = tenCTy;
+		this.TenTP = tenTP;
+		this.Luong = luong;
+		this.Date = date;
+		this.Link = link;
+	}
+
+	public Question get(int position) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

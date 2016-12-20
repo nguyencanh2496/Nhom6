@@ -43,9 +43,7 @@ public class MyDatabaseAccess extends SQLiteOpenHelper {
 		ContentValues values = new ContentValues();
 		values.put("TenCV", question.getTenCV());
 		values.put("TenCTy", question.getTenCTy());
-		values.put("DiaChi", question.getDiaChi());
-		values.put("ThoiGian", question.getThoiGian());
-		values.put("Luong", question.getLuong());
+		values.put("Date", question.getDate());
 		
 		long ok = db.insert("question", null, values);
 		if (ok == -1) {
@@ -89,9 +87,7 @@ public class MyDatabaseAccess extends SQLiteOpenHelper {
 		ContentValues values = new ContentValues();
 		values.put("TenCV", newvalue.getTenCV());
 		values.put("TenCTy", newvalue.getTenCTy());
-		values.put("DiaChi", newvalue.getDiaChi());
-		values.put("ThoiGian", newvalue.getThoiGian());
-		values.put("Luong", newvalue.getLuong());
+		values.put("Date", newvalue.getDate());
 		
 		long ok = db.update("question", values, "tencv = ?",
 				new String[] { old.getTenCV() });
@@ -116,7 +112,7 @@ public class MyDatabaseAccess extends SQLiteOpenHelper {
 	}
 	
 	public Question findStudent(Question question) {
-		Question mQuestion = new Question();
+		Question mQuestion = new Question(null, null, null, null, null, null);
 		createOrOpenDatabase();
 
 		String query = "Select * from student where name =" + "\""
@@ -125,9 +121,7 @@ public class MyDatabaseAccess extends SQLiteOpenHelper {
 		if (cur.moveToFirst()) {
 			mQuestion.setTenCV(cur.getString(cur.getColumnIndex("TenCV")));
 			mQuestion.setTenCTy(cur.getString(cur.getColumnIndex("TenCTy")));
-			mQuestion.setDiaChi(cur.getString(cur.getColumnIndex("DiaChi")));
-			mQuestion.setThoiGian(cur.getString(cur.getColumnIndex("ThoiGian")));
-			mQuestion.setLuong(cur.getString(cur.getColumnIndex("Luong")));
+			mQuestion.setDate(cur.getString(cur.getColumnIndex("Date")));
 		}
 
 		this.close();
@@ -140,12 +134,10 @@ public class MyDatabaseAccess extends SQLiteOpenHelper {
 		Cursor cur = db.rawQuery(query, null);
 		if (cur.moveToFirst()) {
 			do {
-				Question mQuestion = new Question();
+				Question mQuestion = new Question(query, query, query, query, query, query);
 				mQuestion.setTenCV(cur.getString(cur.getColumnIndex("TenCV")));
 				mQuestion.setTenCTy(cur.getString(cur.getColumnIndex("TenCTy")));
-				mQuestion.setDiaChi(cur.getString(cur.getColumnIndex("DiaChi")));
-				mQuestion.setThoiGian(cur.getString(cur.getColumnIndex("ThoiGian")));
-				mQuestion.setLuong(cur.getString(cur.getColumnIndex("Luong")));
+				mQuestion.setDate(cur.getString(cur.getColumnIndex("Date")));
 				
 				question.add(mQuestion);
 			} while (cur.moveToNext());
@@ -159,5 +151,6 @@ public class MyDatabaseAccess extends SQLiteOpenHelper {
 		// TODO Auto-generated method stub
 
 	}
+
 
 }

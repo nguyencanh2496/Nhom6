@@ -7,10 +7,11 @@
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="19" />
+     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/jobs"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -23,10 +24,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewDSActivity">
+            android:name=".ListViewDSActivity">
         </activity>
         <activity
             android:name=".DetailActivity">
+        </activity>
+        <activity
+            android:name=".WebviewActivity">
         </activity>
     </application>
 
